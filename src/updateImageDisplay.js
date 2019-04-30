@@ -1,5 +1,4 @@
 import getFileDetails from './fileDetails';
-import createElement from './elementFactory';
 
 const preview = document.querySelector('.preview');
 const input = document.querySelector('input');
@@ -15,7 +14,7 @@ function updateImageDisplay() {
     preview.appendChild(para);
   } else {
     for (let i = 0; i < curFiles.length; i += 1) {
-      const fileDetails = getFileDetails(curFiles[i]);
+      getFileDetails(curFiles[i]);
     }
   }
 }
