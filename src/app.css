@@ -1,0 +1,36 @@
+html {
+  font-family: sans-serif;
+}
+
+.upload {
+  padding: 5px 10px;
+  background-color: #7f9ccb;
+  border-radius: 5px;
+  border: 1px ridge black;
+  font-size: 1.2rem;
+  height: auto;
+}
+
+.container {
+  width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.preview {
+  margin: 1rem 0 0 0;
+}
+
+label:hover,
+form button:hover {
+  background-color: #2d5ba3;
+  color: white;
+  cursor: pointer;
+}
+
+label:active,
+form button:active {
+  background-color: #0d3f8f;
+  color: white;
+  cursor: pointer;
+}
