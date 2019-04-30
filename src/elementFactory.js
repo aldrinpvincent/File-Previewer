@@ -2,9 +2,9 @@ import getFileSize from './getFileSize';
 
 function createMeta(listItem, file, type) {
   const para = document.createElement('p');
-  para.textContent = `File name ${file.name}, file size ${getFileSize(
-    file.size,
-  )} and file type is ${type}.`;
+  para.textContent = `File name :  ${file.name}, file size :  ${getFileSize(
+    file.size
+  )} and file type : ${type}.`;
   listItem.appendChild(para);
   listItem.appendChild(document.createElement('hr'));
 }
@@ -15,23 +15,14 @@ function createElement(type, file) {
   preview.appendChild(list);
   const listItem = document.createElement('li');
 
-  const fileType = type || '';
+  // eslint-disable-next-line no-console
+  console.log('type :', type);
 
-  // console.log('type :', type);
-
-  if (fileType.includes('image')) {
-    const image = document.createElement('img');
-    image.src = window.URL.createObjectURL(file);
-    listItem.appendChild(image);
-    createMeta(listItem, file, fileType);
-  }
-  if (fileType.includes('pdf')) {
-    const pdf = document.createElement('embed');
-    pdf.src = window.URL.createObjectURL(file);
-    listItem.appendChild(pdf);
-    createMeta(listItem, file, fileType);
-  }
-
+  const element = document.createElement('object');
+  element.data = window.URL.createObjectURL(file);
+  element.type = type;
+  listItem.appendChild(element);
+  createMeta(listItem, file, type);
   list.appendChild(listItem);
 }
 export default createElement;
