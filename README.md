@@ -4,4 +4,4 @@ File Previewer is a simple application where you can uplaod single/multiple file
 2. File size 
 3. File type or file extension 
 
-## This application will show the correct preview and details even if you change the file extension manually and upload it.
+### This application will show the correct preview and details even if you change the file extension manually and upload it.
