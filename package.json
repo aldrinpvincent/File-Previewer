@@ -1,8 +1,8 @@
 {
-  "name": "create-esnext-app",
+  "name": "file-previewer",
   "version": "1.0.0",
   "private": true,
-  "description": "ESNext development starter kit",
+  "description": "File Previewer is a simple application where you can uplaod single/multiple files and you can view the preview in browser with details",
   "main": "index.js",
   "scripts": {
     "build": "webpack --config webpack.prod.js",

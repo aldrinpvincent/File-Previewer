@@ -1,6 +1,4 @@
 import updateImageDisplay from './updateImageDisplay';
-import './index.css';
-import './app.css';
 
 // check environment
 if (process.env.NODE_ENV !== 'production') {
@@ -9,5 +7,10 @@ if (process.env.NODE_ENV !== 'production') {
 }
 
 const input = document.querySelector('input');
+const resetButton = document.querySelector('#reset');
+resetButton.addEventListener('click', () => {
+  input.value = '';
+  updateImageDisplay();
+});
 input.style.opacity = 0;
 input.addEventListener('change', updateImageDisplay);

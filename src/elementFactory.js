@@ -1,11 +1,10 @@
 import getFileSize from './getFileSize';
 
 function createMeta(listItem, file, type) {
-  const para = document.createElement('p');
-  para.textContent = `File name :  ${file.name}, file size :  ${getFileSize(
-    file.size
-  )} and file type : ${type}.`;
-  listItem.appendChild(para);
+  const fileDetails = document.createElement('p');
+  fileDetails.innerHTML = `File name :  <strong>${file.name}</strong>,  File size :  <strong>${getFileSize(file.size)}</strong> and File type : <strong>${type}<strong/>.`;
+  fileDetails.className = 'file-details';
+  listItem.appendChild(fileDetails);
   listItem.appendChild(document.createElement('hr'));
 }
 
