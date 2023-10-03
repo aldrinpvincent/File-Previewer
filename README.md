@@ -1,6 +1,6 @@
 # File Previewer
 
-File Previewer is a simple application where you can uplaod single/multiple files and you can view the preview in browser with details like
+File Previewer is a simple application where you can upload single/multiple files and you can view the preview in browser with details like
 
 1. File name
 2. File size
